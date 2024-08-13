@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Special Card</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Pacifico&family=Roboto:wght@300;400&display=swap');
+
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Roboto', sans-serif;
+            background: linear-gradient(135deg, #e0c4f0, #d6a4a4);
+            color: #333;
+            text-align: center;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            overflow: hidden;
+        }
+
+        .card {
+            background: #ffffff;
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+            max-width: 500px;
+            margin: 20px;
+            padding: 40px;
+            position: relative;
+            overflow: hidden;
+            text-align: center;
+            border: 1px solid #e0c4f0; /* Lavender border */
+        }
+
+        .card::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: radial-gradient(circle, rgba(240, 230, 250, 0.5), rgba(255, 255, 255, 0.6));
+            opacity: 0.7;
+            z-index: -1;
+        }
+
+        h1 {
+            font-family: 'Pacifico', cursive;
+            color: #6a5acd; /* Slate Blue */
+            font-size: 3rem;
+            margin: 0;
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+        }
+
+        p {
+            font-size: 1.1rem;
+            color: #666;
+            margin-top: 15px;
+            line-height: 1.6;
+        }
+
+        .button {
+            display: inline-block;
+            background-color: #6a5acd; /* Slate Blue */
+            color: #fff;
+            font-size: 1.2rem;
+            padding: 12px 24px;
+            border-radius: 15px;
+            text-decoration: none;
+            margin-top: 25px;
+            transition: background-color 0.3s ease, transform 0.3s ease;
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        .button:hover {
+            background-color: #4b0082; /* Indigo */
+            transform: translateY(-3px);
+        }
+    </style>
+</head>
+<body>
+    <div class="card">
+        <h1>I love you!</h1>
+        <p>Thank you for being the sweetest and most compassionate friend 🥹❤️. You've truly been the highlight of my summer and hopefully many more years to come! I hope you have the best birthday and I can't wait to see you soon!</p>
+        <a href="https://open.spotify.com/playlist/3mUUouvV12c7IIj9UqnQi1?si=d3ebbf08561a401b" class="button">Birthday playlist</a>
+    </div>
+</body>
+</html>
