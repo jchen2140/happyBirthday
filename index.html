@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy Birthday!</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Pacifico&family=Roboto:wght@300;400&display=swap');
+
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Roboto', sans-serif;
+            background: linear-gradient(to bottom, #e6e6fa, #dcd0ff);
+            color: #333;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .container {
+            position: relative;
+            z-index: 1;
+            padding: 50px;
+            max-width: 600px;
+            margin: 0 auto;
+            background: #ffffff;
+            border-radius: 15px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+            backdrop-filter: blur(8px);
+        }
+
+        h1 {
+            font-family: 'Pacifico', cursive;
+            color: #8a2be2; /* Lavender blue */
+            font-size: 3.5rem;
+            margin: 0;
+            padding: 20px;
+            animation: float 3s ease-in-out infinite;
+        }
+
+        p {
+            font-size: 1.5rem;
+            color: #4b0082; /* Darker lavender */
+            margin-top: 10px;
+            animation: fadeIn 3s ease-in-out;
+        }
+
+        .balloons {
+            margin-top: 20px;
+            font-size: 3rem;
+            animation: balloons 5s ease-in-out infinite;
+        }
+
+        .button {
+            display: inline-block;
+            background-color: #8a2be2; /* Lavender blue */
+            color: #fff;
+            font-size: 1.2rem;
+            padding: 10px 20px;
+            border-radius: 12px;
+            text-decoration: none;
+            margin-top: 20px;
+            transition: background-color 0.3s ease;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        .button:hover {
+            background-color: #7a1fa2; /* Darker lavender blue */
+        }
+
+        .flower {
+            position: absolute;
+            width: 120px;
+            height: 120px;
+            background: radial-gradient(circle, #e6e6fa, #dcd0ff);
+            border-radius: 50%;
+            opacity: 0.7;
+            pointer-events: none;
+            animation: float 6s ease-in-out infinite;
+        }
+
+        .flower1 {
+            top: 10%;
+            left: 10%;
+            transform: rotate(-15deg);
+        }
+
+        .flower2 {
+            top: 30%;
+            right: 10%;
+            transform: rotate(15deg);
+        }
+
+        .flower3 {
+            bottom: 10%;
+            left: 20%;
+            transform: rotate(-15deg);
+        }
+
+        .flower4 {
+            bottom: 20%;
+            right: 25%;
+            transform: rotate(15deg);
+        }
+
+        @keyframes float {
+            0% { transform: translateY(-10px); }
+            50% { transform: translateY(10px); }
+            100% { transform: translateY(-10px); }
+        }
+
+        @keyframes fadeIn {
+            0% { opacity: 0; }
+            100% { opacity: 1; }
+        }
+
+        @keyframes balloons {
+            0% { transform: translateY(0); }
+            50% { transform: translateY(-10px); }
+            100% { transform: translateY(0); }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🎂 Happy Birthday! 🎂</h1>
+        <p>I hope you have the best day hehe</p>
+        <div class="balloons">
+            💞💞💞
+        </div>
+        <a href="second.html" class="button" target="_blank">Click Me!</a>
+    </div>
+    <div class="flower flower1"></div>
+    <div class="flower flower2"></div>
+    <div class="flower flower3"></div>
+    <div class="flower flower4"></div>
+</body>
+</html>
+
