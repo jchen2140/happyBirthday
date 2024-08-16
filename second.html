@@ -11,7 +11,7 @@
             margin: 0;
             padding: 0;
             font-family: 'Roboto', sans-serif;
-            background: linear-gradient(135deg, #e0c4f0, #d6a4a4);
+            background: linear-gradient(135deg, #e6e6fa, #dcd0ff);
             color: #333;
             text-align: center;
             display: flex;
@@ -23,15 +23,15 @@
 
         .card {
             background: #ffffff;
-            border-radius: 20px;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
-            max-width: 500px;
-            margin: 20px;
-            padding: 40px;
+            border-radius: 30px;
+            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.25);
+            max-width: 600px;
+            padding: 50px;
             position: relative;
             overflow: hidden;
             text-align: center;
-            border: 1px solid #e0c4f0; /* Lavender border */
+            border: 2px solid #e6e6fa; /* Light lavender border */
+            animation: cardPop 1s ease-in-out, cardGlow 2s ease-in-out infinite;
         }
 
         .card::before {
@@ -41,42 +41,93 @@
             left: 0;
             width: 100%;
             height: 100%;
-            background: radial-gradient(circle, rgba(240, 230, 250, 0.5), rgba(255, 255, 255, 0.6));
-            opacity: 0.7;
+            background: radial-gradient(circle, rgba(240, 230, 250, 0.4), rgba(255, 255, 255, 0.6));
+            opacity: 0.6;
             z-index: -1;
+            animation: shine 4s linear infinite;
         }
 
         h1 {
             font-family: 'Pacifico', cursive;
-            color: #6a5acd; /* Slate Blue */
-            font-size: 3rem;
+            color: #8a2be2; /* Light lavender blue */
+            font-size: 4rem;
             margin: 0;
-            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+            text-shadow: 0 0 15px rgba(138, 43, 226, 0.6);
+            animation: glow 2s ease-in-out infinite, float 2s ease-in-out infinite;
         }
 
         p {
-            font-size: 1.1rem;
-            color: #666;
+            font-size: 1.2rem;
+            color: #6a5acd; /* Medium slate blue */
             margin-top: 15px;
-            line-height: 1.6;
+            line-height: 1.8;
+            animation: fadeIn 2s ease-in-out;
         }
 
         .button {
             display: inline-block;
-            background-color: #6a5acd; /* Slate Blue */
+            background-color: #8a2be2; /* Light lavender blue */
             color: #fff;
-            font-size: 1.2rem;
-            padding: 12px 24px;
-            border-radius: 15px;
+            font-size: 1.3rem;
+            padding: 14px 28px;
+            border-radius: 20px;
             text-decoration: none;
             margin-top: 25px;
-            transition: background-color 0.3s ease, transform 0.3s ease;
-            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+            transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+            animation: buttonPulse 2s infinite, buttonShadow 1.5s ease-in-out infinite;
         }
 
         .button:hover {
-            background-color: #4b0082; /* Indigo */
-            transform: translateY(-3px);
+            background-color: #7a1fa2; /* Darker lavender blue */
+            transform: translateY(-4px);
+            box-shadow: 0 12px 24px rgba(0, 0, 0, 0.4);
+        }
+
+        @keyframes cardPop {
+            0% { transform: scale(0.9); opacity: 0.7; }
+            100% { transform: scale(1); opacity: 1; }
+        }
+
+        @keyframes cardGlow {
+            0% { box-shadow: 0 0 20px rgba(138, 43, 226, 0.6); }
+            50% { box-shadow: 0 0 40px rgba(138, 43, 226, 0.8); }
+            100% { box-shadow: 0 0 20px rgba(138, 43, 226, 0.6); }
+        }
+
+        @keyframes shine {
+            0% { background-position: -100% -100%; }
+            50% { background-position: 100% 100%; }
+            100% { background-position: -100% -100%; }
+        }
+
+        @keyframes glow {
+            0% { text-shadow: 0 0 15px rgba(138, 43, 226, 0.5); }
+            50% { text-shadow: 0 0 30px rgba(138, 43, 226, 0.8); }
+            100% { text-shadow: 0 0 15px rgba(138, 43, 226, 0.5); }
+        }
+
+        @keyframes float {
+            0% { transform: translateY(-10px); }
+            50% { transform: translateY(10px); }
+            100% { transform: translateY(-10px); }
+        }
+
+        @keyframes fadeIn {
+            0% { opacity: 0; }
+            100% { opacity: 1; }
+        }
+
+        @keyframes buttonPulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+            100% { transform: scale(1); }
+        }
+
+        @keyframes buttonShadow {
+            0% { box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3); }
+            50% { box-shadow: 0 12px 30px rgba(0, 0, 0, 0.4); }
+            100% { box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3); }
         }
     </style>
 </head>
@@ -84,7 +135,8 @@
     <div class="card">
         <h1>I love you!</h1>
         <p>Thank you for being the sweetest and most compassionate friend 🥹❤️. You've truly been the highlight of my summer and hopefully many more years to come! I hope you have the best birthday and I can't wait to see you soon!</p>
-        <a href="https://open.spotify.com/playlist/3mUUouvV12c7IIj9UqnQi1?si=d3ebbf08561a401b" class="button">Birthday playlist</a>
+        <a href="https://open.spotify.com/playlist/3mUUouvV12c7IIj9UqnQi1?si=d3ebbf08561a401b" class="button">Birthday Playlist</a>
     </div>
 </body>
 </html>
+
