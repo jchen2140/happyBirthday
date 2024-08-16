@@ -11,102 +11,108 @@
             margin: 0;
             padding: 0;
             font-family: 'Roboto', sans-serif;
-            background: linear-gradient(to bottom, #e6e6fa, #dcd0ff);
+            background: radial-gradient(circle at top, #e6e6fa, #dcd0ff);
             color: #333;
             text-align: center;
             position: relative;
             overflow: hidden;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh; /* Full viewport height */
         }
 
         .container {
             position: relative;
             z-index: 1;
             padding: 50px;
-            max-width: 600px;
-            margin: 0 auto;
-            background: #ffffff;
-            border-radius: 15px;
-            box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
-            backdrop-filter: blur(8px);
+            max-width: 700px;
+            background: rgba(255, 255, 255, 0.9);
+            border-radius: 25px;
+            box-shadow: 0 0 40px rgba(0, 0, 0, 0.3);
+            backdrop-filter: blur(15px);
         }
 
         h1 {
             font-family: 'Pacifico', cursive;
-            color: #8a2be2; /* Lavender blue */
-            font-size: 3rem;
+            color: #d6a6e8; /* Light lavender */
+            font-size: 4rem;
             margin: 0;
             padding: 20px;
-            animation: float 3s ease-in-out infinite;
+            text-shadow: 3px 3px 10px rgba(255, 182, 193, 0.5);
+            animation: float 3s ease-in-out infinite, sparkle 2s linear infinite, glow 1.5s ease-in-out infinite;
         }
 
         p {
-            font-size: 1.5rem;
-            color: #4b0082; /* Darker lavender */
+            font-size: 1.8rem;
+            color: #6a5acd; /* Medium slate blue */
             margin-top: 10px;
             animation: fadeIn 3s ease-in-out;
         }
 
         .balloons {
             margin-top: 20px;
-            font-size: 3rem;
-            animation: balloons 5s ease-in-out infinite;
+            font-size: 4.5rem;
+            animation: balloons 5s ease-in-out infinite, float 6s ease-in-out infinite;
         }
 
         .button {
             display: inline-block;
-            background-color: #8a2be2; /* Lavender blue */
+            background-color: #d6a6e8; /* Light lavender */
             color: #fff;
-            font-size: 1.2rem;
-            padding: 10px 20px;
-            border-radius: 12px;
+            font-size: 1.4rem;
+            padding: 12px 24px;
+            border-radius: 20px;
             text-decoration: none;
             margin-top: 20px;
-            transition: background-color 0.3s ease;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4);
         }
 
         .button:hover {
-            background-color: #7a1fa2; /* Darker lavender blue */
+            background-color: #b68bd0; /* Slightly darker lavender */
+            transform: scale(1.05);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
         }
 
         .flower {
             position: absolute;
-            width: 120px;
-            height: 120px;
-            background: radial-gradient(circle, #e6e6fa, #dcd0ff);
+            width: 150px;
+            height: 150px;
+            background: radial-gradient(circle, #ffffff, #e6e6fa);
             border-radius: 50%;
-            opacity: 0.7;
+            opacity: 0.9;
             pointer-events: none;
-            animation: float 6s ease-in-out infinite;
+            animation: float 6s ease-in-out infinite, sparkle 2s linear infinite;
         }
 
         .flower1 {
-            top: 10%;
-            left: 10%;
+            top: 5%;
+            left: 5%;
             transform: rotate(-15deg);
         }
 
         .flower2 {
-            top: 30%;
-            right: 10%;
+            top: 25%;
+            right: 5%;
             transform: rotate(15deg);
         }
 
         .flower3 {
             bottom: 10%;
-            left: 20%;
+            left: 15%;
             transform: rotate(-15deg);
         }
 
         .flower4 {
-            bottom: 20%;
-            right: 25%;
+            bottom: 15%;
+            right: 20%;
             transform: rotate(15deg);
         }
 
         @keyframes float {
             0% { transform: translateY(-10px); }
-            50% { transform: translateY(10px); }
+            50% { transform: translateY(15px); }
             100% { transform: translateY(-10px); }
         }
 
@@ -117,8 +123,20 @@
 
         @keyframes balloons {
             0% { transform: translateY(0); }
-            50% { transform: translateY(-10px); }
+            50% { transform: translateY(-20px); }
             100% { transform: translateY(0); }
+        }
+
+        @keyframes sparkle {
+            0% { opacity: 0.8; }
+            50% { opacity: 1; }
+            100% { opacity: 0.8; }
+        }
+
+        @keyframes glow {
+            0% { text-shadow: 3px 3px 10px rgba(255, 182, 193, 0.5); }
+            50% { text-shadow: 0 0 25px rgba(255, 105, 180, 0.7); }
+            100% { text-shadow: 3px 3px 10px rgba(255, 182, 193, 0.5); }
         }
     </style>
 </head>
@@ -126,10 +144,7 @@
     <div class="container">
         <h1>🎂 Happy Birthday! 🎂</h1>
         <p>I hope you have the best day hehe</p>
-        <div class="balloons">
-            💞💞💞
-        </div>
-        <a href="second" class="button" target="_blank">Click Me!</a>
+        <a href="second.html" class="button" target="_blank">click me pwease 🥹</a>
     </div>
     <div class="flower flower1"></div>
     <div class="flower flower2"></div>
@@ -137,4 +152,3 @@
     <div class="flower flower4"></div>
 </body>
 </html>
-
